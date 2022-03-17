@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>No more, Milind</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">Logo</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Education</a></li>
+                <li><a href="call.html">Skills</a></li>
+                <li><a href="about.html" class="active" >Hobbies</a></li>
+            </ul>
+        </header>
+        <div class="imgs">
+            <div class="slide active">
+                <img src="1.png" alt="">
+                <div class="info">
+                    <h2>It's a Basket!</h2>
+                    <p>I have been playing Basketball since 12 years old. I played for District. Rather than a shooter I'm a very good defencer.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="2.png" alt="">
+            <div class="info">
+              <h2>Rock on!</h2>
+              <p>Inspired by many famous guitarists. I planned to put my interest in learning this instument. It is hard an year, but i have learnt most of the chords.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="3.png" alt="">
+            <div class="info">
+              <h2>Art is free</h2>
+              <p>Im a very good artist. I have been doing drawing, paintings, sketches, etc since 8 years old. I won many awards. Now I extended my interest in exploring digital art.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="4.png" alt="">
+            <div class="info">
+              <h2>Com computers..</h2>
+              <p>Im fond of computers from my childhood. I had decided to be a Computer engineer at the early age itself. I did ny B.tech. at Presidency University. As per my dream I'm a successful computer engineer.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="5.png" alt="">
+            <div class="info">
+              <h2>Fooooood!</h2>
+              <p>I Scream, You Scream for Ice Cream. I'm a die hard lover of Ice Cream. Easiest way to make me do things, is to just get me an ice cream of any flavour.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="6.png" alt="">
+            <div class="info">
+              <h2>Bookworm</h2>
+              <p>Nothing can replace books. I read a lot of novels, comics, articles too. I always prefered books over E-Book. </p>
+            </div>
+        </div>
+        <div class="navi">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+          </div>
+        </div>
+        <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+        var manualNav = function(manual){
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+            });
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+        }
+        
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+        </script>
+    </body>
+</html>

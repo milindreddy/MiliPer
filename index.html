@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>No more, Milind</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/cf9e29850c.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">Logo</a>
+            <ul>
+                <li><a href="index.html" class="active" >Home</a></li>
+                <li><a href="page2.html">Education</a></li>
+                <li><a href="call.html">Skills</a></li>
+                <li><a href="about.html">Hobbies</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="clouds.png" id="clouds2">
+            <img src="grador.png" id="gd">
+            <!img src="name.png" id="name">
+            <img src="clouds.png" id="clouds">
+            <img src="orange.png" id="org">
+            <img src="brown.png" id="brown">
+            <img src="birds.png" id="bird">
+            <img src="Rc.png" id="Rc">
+            <img src="Lc.png" id="Lc">
+        </section>
+        <div class="sec" id="sec">
+            <span align="center" class="tle">Milind Reddy M P</span>
+            <span align="center" class="tle2">the programmer</span>
+            <p>Hello!,<br>
+                Welcome you to my First webpage. I hope you are loving it already.
+                The page represents one of the seven wonders of the world, Taj Mahal.
+                If you look close you'll find Charminar, Indian Gate, etc. etc....
+                India is one of the oldest civilizations in the world with a kaleidoscopic variety 
+                and rich cultural heritage. It has achieved all-round socio-economic progress during 
+                the last 65 years of its Independence. India has become self-sufficient in agricultural 
+                production and is now one of the top industrialized countries in the world and one of the few 
+                nations to have gone into outer space to conquer nature for the benefit of the people.<br><br>
+                The colors orange, Brown, Yellow forms a great choice of colors. As you can see the page is fitted with header and footer
+                the parallex design was made by taking raw image and dividing it into layers to create different .png files,
+                which were later aligned in the html doc. The animation goes as you scroll, the edits were made in css.
+
+                <br><br><br><br><br><br></p>
+           
+        </div>
+        <script>
+            let clouds2 = document.getElementById('clouds2');
+            let gd = document.getElementById('gd');
+            let name = document.getElementById('name');
+            let clouds = document.getElementById('clouds');
+            let org = document.getElementById('org');
+            let brown = document.getElementById('brown');
+            let bird = document.getElementById('bird');
+            let Rc = document.getElementById('Rc');
+            let Lc = document.getElementById('Lc');
+            let btn= document.getElementById('btn');
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                bird.style.left = value * 1.25 +'px';
+                clouds.style.left= value * -1.5 + 'px';
+                clouds2.style.left=value * 0.5 + 'px';
+                gd.style.top=value * 0.5 + 'px';
+                org.style.top = value * 0.3 +'px';
+                name.style.top = value * -0.3 +'px';
+                btn.style.marginTop = value * 1.5 +'px';
+                Lc.style.left = value * 0.5 +'px';
+            })
+        </script>
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <a href="index.html" class="logo">Logo</a>
+                    <p>lalaland</p>
+                </div>
+                <div class="col">
+                    <h3>Office <div class="under"><span></span></div></h3>
+                    <p>Home Sweet Home</p>
+                    <p>Basaweshwaranagar, Bangalore</p>
+                    <p>Karnataka, PIN 560010, India</p>
+                    <p><a href="https://www.google.com/maps/place/K.K+Car+Decor/@12.986394,77.5454008,21z/data=!4m5!3m4!1s0x3bae3deca4ab5d8b:0xabe8e1e8fee03b3c!8m2!3d12.9863855!4d77.5454583" class="Loc">My Location</a></p>
+                    <p class="email"><a href = "mailto:milind.kanini@gmail.com">milind.kanini@gmail.com</a></p>
+                    <h4>+91 9945746490</h4>
+                </div>
+                <div class="col">
+                    <h3>Links<div class="under"><span></span></div></h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page2.html">Education</a></li>
+                        <li><a href="call.html">Skills</a></li>
+                        <li><a href="about.html">Hobbies</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Get my works<div class="under"><span></span></div></h3>
+                    <form>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email id" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="social">
+                        <a href="https://www.facebook.com/milind.reddy.9"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/milindreddy29/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://wa.me/qr/PVFMC7WGVVMVF1"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copy">Milind Reddy © 2022 - All Rights Reserved</p>
+        </footer>
+    </body>
+</html>

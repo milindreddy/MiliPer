@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>No more, Milind</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var user = {
+                Sl: "",
+                Skill:"",
+                Level:"",
+                Remark:""
+            }
+            var users = [];
+            function func1() {
+                var name = document.getElementById("sname");
+                var lvl = document.getElementById("slev");
+                var rmrk = document.getElementById("srem");
+                if (name.value == "") {
+                    alert("username cannot be empty");
+                }
+                else if (lvl.value == "") {
+                    alert("Give your skill level");
+                }
+                else if (rmrk.value == "") {
+                    alert("Please consider giving remark.");
+                }
+                else {
+                    user = {};
+                    user.Skill = name.value;
+                    user.Level = lvl.value;
+                    user.Rema = rmrk.value;
+                    users.push(user);
+                }
+                console.log(users);
+                var table = document.getElementById("userTable");
+                var row = table.insertRow();
+                var cellno = row.insertCell();
+                var cellskill = row.insertCell();
+                var celllevel = row.insertCell();
+                var cellremark = row.insertCell();
+                for (var i = 0; i < users.length; i++) {
+                    cellno.innerHTML = i+1;
+                    cellskill.innerHTML = users[i].Skill;
+                    celllevel.innerHTML = users[i].Level;
+                    cellremark.innerHTML = users[i].Rema;
+                }
+            }
+        </script>
+        </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">Logo</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Education</a></li>
+                <li><a href="call.html"  class="active" >Skills</a></li>
+                <li><a href="about.html">Hobbies</a></li>
+            </ul>
+        </header>
+        <div class="head">
+            <h1>Skills.</h1>
+        </div>
+        <div class="skillbars">
+            <div class="bar">
+                <div class="info">
+                    <span>HTML</span>
+                </div>
+                <div class="movline html">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>MySQL</span>
+                </div>
+                <div class="movline MySQL">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>CSS</span>
+                </div>
+                <div class="movline CSS">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>Python</span>
+                </div>
+                <div class="movline Python">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>Photoshop</span>
+                </div>
+                <div class="movline Photoshop">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>Illustrator</span>
+                </div>
+                <div class="movline Illustrator">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="input">
+            <div class="attr">
+                <input type="text" id="sname" placeholder="Enter your Skill Name" required>
+                <input type="number" id="slev" placeholder="Enter your Skill level" required>
+                <input type="text" id="srem" placeholder="Remark" required>
+            </div>
+            <button class="addb"type="button"onclick="func1()">Add</button>
+            <table style="width:55%" border="1" id="userTable" class="tblsz">
+                <thead>
+                    <tr>
+                        <th>Sl.No.</th>
+                        <th>Skill</th>
+                        <th>Level</th>
+                        <th>Remark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+</html>
